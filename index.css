@@ -1,7 +1,12 @@
 body{
-    background-color: #f4f4f4;
+background-image: url(https://th.bing.com/th/id/OIP.fb6_VD9yY_IkhFD61npfkQHaEK?w=227&h=180&c=7&r=0&o=5&dpr=4.2&pid=1.7);
+background-size: cover;
 }
 
-form{
-    
-}
+nav a {
+    line-height: 3rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+  }
