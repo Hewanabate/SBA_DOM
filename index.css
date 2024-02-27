@@ -10,3 +10,23 @@ nav a {
     text-decoration: none;
     color: white;
   }
+
+  label{
+    color:white;
+  }
+
+  #btn {
+    background-color: darkolivegreen;
+    color:white;
+  }
+
+  form {
+    padding-top: 80px;
+    padding-bottom: 40px;;
+  }
+  
+  .beauty{
+    display:flex;
+    position:relative;
+    flex-wrap: wrap;
+  }
