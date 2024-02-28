@@ -29,44 +29,42 @@ divbar.style.color = 'white';
 
 const para = document.getElementById('app');
 para.innerHTML =
-  ' <p><i><u>Vist US</u></i></p><p><i>1234 DownTown</i></p><p><i>Dallas, TX 73475</i></p><p><i>Tel: 460-987-6789</i></p><p><i>wowbeauty@.co</i></p><br><p><i><u>Open Hours</u></i></p><p><i>Monday - Friday 9am-6pm | Saturday 9am - 4pm</i></p>';
+  '<p><i>1234 DownTown</i></p><p><i>Dallas, TX 73475</i></p><p><i>Tel: 460-987-6789</i></p><p><i>wowbeauty@.co</i></p><br><p><i><u>Open Hours</u></i></p><p><i>Monday - Friday 9am-6pm | Saturday 9am - 4pm</i></p>';
 para.style.color = 'white';
 
-// use firstElementChild
-const town = document.querySelector('p');
-town.firstElementChild.style.color="gold";
+// use lastElementChild
+const town = document.getElementById('app');
+town.lastElementChild.style.color = 'gold';
 
-// addEventlistener on submit 
-const myForm = document.querySelector("form");
+// addEventlistener on submit
+const myForm = document.querySelector('form');
 
-myForm.addEventListener("submit", (e) => {
+myForm.addEventListener('submit', (e) => {
   e.preventDefault();
   // alert the user
   alert(`You submitted: 
-  ${myForm.querySelector("input").value}`);
-
+  ${myForm.querySelector('input').value}`);
   //reset the form
   myForm.reset();
-
+    
 });
 
+const form = document.querySelector('form');
+const email = form.elements['email'];
+const password = form.elements['password'];
 
-const form = document.querySelector("form");
-const email = form.elements["email"];
-const password = form.elements["password"];
-
-form.addEventListener("submit", validate);
+form.addEventListener('submit', validate);
 
 // The validation function.
 
 function validate(event) {
-// validate email
+  // validate email
   const emailVal = validateEmail();
   if (emailVal === false) {
     event.returnValue = false;
     return false;
   }
-//validate password
+  //validate password
   const passwordVal = validatePassword();
   if (passwordVal === false) {
     event.returnValue = false;
@@ -75,10 +73,10 @@ function validate(event) {
 
   return true;
 }
+  
+//Select and cache the all of the <a> elements inside of menuNavbar
 
-//Select and cache the all of the <a> elements inside of menuNavbar 
-
-const menuItem1 = navbar.querySelectorAll('a');
+ const menuItem1 = navbar.querySelectorAll('a');
 
 navbar.addEventListener('click', function (event) {
   event.preventDefault();
@@ -98,4 +96,9 @@ navbar.addEventListener('click', function (event) {
     });
     event.target.classList.add('active');
   }
-}); 
+});
+
+ //function to interact with the user when click "vist us"
+function myFunction(){
+  const vist= document.getElementById('vist').innerHTML='Thank you for visting us';
+ }
