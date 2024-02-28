@@ -36,6 +36,12 @@ para.style.color = 'white';
 const town = document.getElementById('app');
 town.lastElementChild.style.color = 'gold';
 
+// clone
+const node = document.getElementById('app').lastChild;
+const clone = node.clone(true);
+
+//document.getElementsByClassName("beauty").appendChild(clone);
+
 // addEventlistener on submit
 const myForm = document.querySelector('form');
 
@@ -98,7 +104,11 @@ navbar.addEventListener('click', function (event) {
   }
 });
 
+//add event listener to the vist us on click
+vist.addEventListener('click',myFunction)
+
  //function to interact with the user when click "vist us"
 function myFunction(){
   const vist= document.getElementById('vist').innerHTML='Thank you for visting us';
+  vist.rest();
  }
